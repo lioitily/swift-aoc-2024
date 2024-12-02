@@ -28,7 +28,12 @@ struct Day01: AdventDay {
   // Replace this with your solution for the second part of the day's challenge.
   func part2() -> Any {
     // Sum the maximum entries in each set of data
-//    entities.map { $0.max() ?? 0 }.reduce(0, +)
-    0
+    let lefts = entities.0
+    let rights = entities.1
+    return lefts
+      .map { left in
+        return left * rights.count(where: { $0 == left })
+      }
+      .reduce(0, +)
   }
 }
