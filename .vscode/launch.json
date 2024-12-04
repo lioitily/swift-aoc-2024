@@ -5,10 +5,19 @@
       "type": "lldb",
       "request": "launch",
       "name": "Debug AdventOfCode",
-      "program": "${workspaceFolder}/.build/debug/AdventOfCode",
+      "program": "${workspaceFolder:swift-aoc-2024}/.build/debug/AdventOfCode",
       "args": [],
-      "cwd": "${workspaceFolder}",
+      "cwd": "${workspaceFolder:swift-aoc-2024}",
       "preLaunchTask": "swift: Build Debug AdventOfCode"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:swift-aoc-2024}",
+      "name": "Release AdventOfCode",
+      "program": "${workspaceFolder:swift-aoc-2024}/.build/release/AdventOfCode",
+      "preLaunchTask": "swift: Build Release AdventOfCode"
     }
   ]
 }
